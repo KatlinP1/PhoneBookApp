@@ -1,0 +1,51 @@
+:root {
+    --light-blue:  #dbd0b8;
+  }
+  
+  html {
+      background-color: #dbd0b8;
+      min-height: 1000px;
+      font-family: 'helvetica neue';
+    }
+    
+    h1 {
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .phone li{
+        text-align: center;
+        list-style-type: none;
+        padding: 10px;
+    }
+
+    h2{
+        color: black;
+        text-align: center;
+    }
+       
+    #heading {
+      background-color: var(--blue-color);
+      text-align: center;
+    }   
+      
+      p {
+        margin: 0;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 200;
+        color: #00204a;
+      }
+
+      form {
+        text-align: center;
+        margin-left: 20px;
+      }
+      
+
+      ::placeholder {
+        color: grey;
+        opacity: 1;
+      }
+      

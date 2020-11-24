@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>PhoneBook</title>
+</head>
+<body>
+  <h1> Insert contacts to your phonebook </h1>
+  <form action="/phone" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="phone" name="phone">
+    <button type="submit">Submit</button>
+  </form>
+  
+  <h2> Phonebook contacts </h2>
+  <div id="contactlist"> 
+  <ul class="phone">
+    <!-- Loop through contacts -->
+    <% for(var i = 0; i < contactlist.length; i++) {%>
+      <li class="phone">
+        <!-- Output name  -->
+        <span><%= contactlist[i].name %></span>:
+        <!-- Output quote  -->
+        <span><%= contactlist[i].phone %></span>
+      </li>
+
+      <form action="/phone/delete" method="POST">
+        <input type="hidden" name="id", value="<%= contactlist[i].id %>">
+        <button type="submit">Delete contact</button>
+      </form>    
+    <% } %>
+  </ul>
+</div>  
+
+</body>
+</html>
